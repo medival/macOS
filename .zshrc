@@ -1,29 +1,114 @@
-export ZSH="/Users/danielshotonwa/.oh-my-zsh"
-export PATH="$HOME/.jenv/bin:$PATH"
-export LC_ALL=en_US.UTF-8
-eval "$(jenv init -)"
-export ES_HOME="~/Documents/project/elasticsearch-1.5.2"
-export PATH=$ES_HOME/bin:$PATH
-export FLUXX_LOCAL_CONFIG_NAME=dev-show-unique
-# Use spaceship theme
-ZSH_THEME="spaceship"
-autoload -U promptinit; promptinit
-export UPDATE_ZSH_DAYS=1
+export ZSH_DISABLE_COMPFIX=true
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Enable autocorrection
-ENABLE_CORRECTION="true"
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/medival/.oh-my-zsh"
+# Path to Flutter
+export PATH="$PATH:/Users/medival/flutter/bin"
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# export PATH="usr/local/openssl@.1.1/bin:PATH"
+# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+#Path Android SDK
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#Laravel
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+#Start TMUX at begining
+#if ["$TMUX" = ""]; then tmux;
+
+#Python3 Commonmark (cmark)
+# export PATH="Users/medival/Library/Python/3.9/bin"
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/usr/local/etc/php/7.4/:$PATH"
+export PATH="$PATH:/opt/local/bin/python3.8/"
+
+# Bazel Path
+export PATH="$PATH:$HOME/bin"
+
+# Flutter Path SDK
+export PATH="$PATH:$HOME/flutter/bin"
+
+#Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   docker
-  rails
   npm
   django
-  rails
   git zsh-z
   bundler
   dotenv
@@ -39,9 +124,7 @@ plugins=(
   colored-man-pages
   colorize
   common-aliases
-  copyfile
-)
-
+  copyfile)
 SPACESHIP_PROMPT_ORDER=(
   time
   user
@@ -190,43 +273,50 @@ SPACESHIP_PROMPT_ORDER=(
    SPACESHIP_VI_MODE_COLOR="white"
 source $ZSH/oh-my-zsh.sh
 
-# My useful aliases
-alias jira="cd ~/Documents/project/gitjira-cli"
-alias prlist='go run *.go pr -s "2019-10-01" -o -c > ~/Documents/project/pr.txt'
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themess. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
 alias c="clear"
 alias q="exit"
-alias zsh="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vimrc='vim ~/.vimrc'
-alias szsh="source ~/.zshrc"
-alias p="cd ~/document/project/Personal\ Projects"
-alias berm="bundle exec rake db:migrate"
-alias bec="bundle exec rails c"
-alias bes="bundle exec rails s"
-alias bel="bin/elasticsearch"
-alias fluxx="cd ~/Documents/project/Partner/fluxx_flmtg"
-alias es="cd ~/Documents/project/elasticsearch-7.5.0 && bel"
-alias dyn="DYNAMIC_SCHEDULE=true bundle exec rake resque:scheduler"
-alias que="QUEUE=* bundle exec rake resque:work"
-alias regex="perldoc perlreref"
-local ret_status="%(?:%{$fg[yellow]%}=> :%{$fg[red]%}=> %s)"
-
-bindkey -v
-# npm global
-export PATH=~/.npm-global/bin:$PATH
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+alias zs="source ~/.zshrc"
+alias htdocs="cd /Applications/MAMP/htdocs"
+alias home="cd /HOME"
+alias google.com="ping www.google.com"
+alias 8="ping 8.8.8.8"
+alias p="ping"
+alias h1="ping 36.66.172.107"
+alias h23="ping 36.66.168.167"
+alias ngrok="cd /bin && ngrok"
+alias masscan="/Applications/MAMP/htdocs/masscan/bin && ./masscan"
+alias sherlock="python3 sherlock"
+alias hping3="/usr/local/Cellar/hping/3.20051105/sbin/ && sudo ./hping3"
+alias mtr="/usr/local/Cellar/mtr/0.94/sbin/ && sudo ./mtr"
+alias zmap="/usr/local/Cellar/zmap/2.1.1_2/sbin/ && ./zmap"
+alias netbox="/Applications/MAMP/htdocs/netbox-docker && docker-compose up"
+alias ll="ls -al"
+alias 52="ssh server52@36.66.168.167 -p 52"
+alias loginh23="ssh ahass@36.66.168.167 -p 9999"
+alias cls="clear"
+alias ps="/usr/local/microsoft/powershell/7/pwsh"
+alias gdu="htdocs && ./gdu_darwin_amd64"
+alias micro="cd ~ && ./micro"
