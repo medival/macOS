@@ -35,7 +35,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 #if ["$TMUX" = ""]; then tmux;
 
 #Brew Disable Auto-Update
-HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 #Python3 Commonmark (cmark)
 # export PATH="Users/medival/Library/Python/3.9/bin"
@@ -50,6 +50,11 @@ export PATH="$PATH:$HOME/bin"
 
 # Flutter Path SDK
 export PATH="$PATH:$HOME/flutter/bin"
+
+export PATH="/usr/local/opt/luajit-openresty/bin:$PATH"
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/m4/bin:$PATH"
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
 #Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -165,6 +170,7 @@ alias zs="source ~/.zshrc"
 alias htdocs="cd /Applications/MAMP/htdocs"
 alias workspace="cd /Applications/MAMP/htdocs/workspace"
 alias dicoding="cd /Applications/MAMP/htdocs/dicoding"
+alias macos="cd /Applications/MAMP/htdocs/macOS"
 alias home="cd /HOME"
 alias google.com="ping www.google.com"
 alias 8="ping 8.8.8.8"
@@ -182,18 +188,18 @@ alias ll="ls -al"
 alias 52="ssh server52@36.66.168.167 -p 52"
 alias loginh23="ssh ahass@36.66.168.167 -p 9999"
 alias cls="clear"
-alias ps="/usr/local/microsoft/powershell/7/pwsh"
+alias pshell="/usr/local/microsoft/powershell/7/pwsh"
 alias gdu="htdocs && ./gdu_darwin_amd64"
 alias micro="cd ~ && ./micro"
 alias nv="nvim"
 alias ovpn="openvpn"
+alias ssh-student-pod-master="ssh student@lab6.btech.id -p 22110"
+alias ssh-student-pod-worker01="ssh student@lab6.btech.id -p 22121"
+alias ssh-student-pod-worker02="ssh student@lab6.btech.id -p 22131"
+alias lc="colorls -lA --sd"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/opt/luajit-openresty/bin:$PATH"
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
-export PATH="/usr/local/opt/m4/bin:$PATH"
-export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(mcfly init zsh)"
 source $(dirname $(gem which colorls))/tab_complete.sh
-alias lc='colorls -lA --sd'
