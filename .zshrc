@@ -196,7 +196,7 @@ alias ovpn="openvpn"
 alias ssh-student-pod-master="ssh student@lab6.btech.id -p 22110"
 alias ssh-student-pod-worker01="ssh student@lab6.btech.id -p 22121"
 alias ssh-student-pod-worker02="ssh student@lab6.btech.id -p 22131"
-alias ssh-student-gitlab="ssh student@lab4.btech.id -p 22311"
+alias ssh-student-gitlab="ssh student@lab4.btech.id -p 33211"
 alias lc="colorls -lA --sd"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
