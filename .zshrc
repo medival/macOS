@@ -197,6 +197,8 @@ alias ssh-student-pod-master="ssh student@lab6.btech.id -p 22110"
 alias ssh-student-pod-worker01="ssh student@lab6.btech.id -p 22121"
 alias ssh-student-pod-worker02="ssh student@lab6.btech.id -p 22131"
 alias ssh-student-gitlab="ssh student@lab4.btech.id -p 33211"
+alias ssh-student-pod-master-tunneling="ssh student@lab6.btech.id -p 22110 -D9900"
+alias ssh-student-gitlab-tunneling="ssh student@lab4.btech.id -p 33211 -D9900"
 alias lc="colorls -lA --sd"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -204,3 +206,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(mcfly init zsh)"
 source $(dirname $(gem which colorls))/tab_complete.sh
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
